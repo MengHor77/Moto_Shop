@@ -713,9 +713,9 @@ video {
   color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 
-.hover\:bg-green-300:hover {
+.hover\:bg-red-300:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(134 239 172 / var(--tw-bg-opacity));
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-red-400:hover {
