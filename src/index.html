@@ -4,192 +4,289 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/output.css" />
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <style>
+      .motobike_1:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+
+      /* Ensure modal covers the whole page */
+      #myModal {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);  
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.3s ease-in-out;
+      }
+
+      #myModal.show {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .modal-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 800px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+      }
+
+      .modal-content img {
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+        object-fit: contain;
+      }
+
+      .close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      .close-button:hover {
+        background-color: darkred;
+      }
+    </style>
   </head>
-  <body>
+  <body class="font-sans bg-gray-100">
+
     <div class="">
+
       <!-- Header -->
-      <div class="">
-        <div class="flex justify-start pt-4 px-20 bg-gray-400">
-          <img
-            class="rounded-full w-32 h-32"
-            src="/src/Image/logo/logo.png"
-            alt=""
-          />
+      <div class="flex justify-start pt-4 px-20 bg-gray-400">
+        <img class="rounded-full w-32 h-32" src="/src/Image/logo/logo.png" alt="Logo" />
+      </div>
+
+      <div class="w-full h-full flex gap-2 justify-center items-center text-center py-4 text-3xl text-red-600 bg-gray-400">
+        <div class="hover:font-bold hover:text-gray-700 hover:bg-red-400 rounded-lg p-2">
+          Home
         </div>
-        <div
-          class="w-full h-full flex gap-2 justify-center items-center text-center py-4 text-3xl text-red-600 bg-gray-400"
-        >
-          <div
-            class="hover:font-bold hover:text-gray-700 hover:bg-red-400 rounded-lg p-2"
-          >
-            Home
-          </div>
-          <div
-            class="hover:font-bold hover:text-gray-700 hover:bg-red-400 rounded-lg p-2"
-          >
-            Product
-          </div>
-          <div
-            class="hover:font-bold hover:text-gray-700 hover:bg-red-400 rounded-lg p-2"
-          >
-            Service
-          </div>
-          <div
-            class="hover:font-bold hover:text-gray-700 hover:bg-red-400 rounded-lg p-2"
-          >
-            About
-          </div>
+        <div class="hover:font-bold hover:text-gray-700 hover:bg-red-400 rounded-lg p-2">
+          Product
+        </div>
+        <div class="hover:font-bold hover:text-gray-700 hover:bg-red-400 rounded-lg p-2">
+          Service
+        </div>
+        <div class="hover:font-bold hover:text-gray-700 hover:bg-red-400 rounded-lg p-2">
+          About
         </div>
       </div>
 
       <!-- Main Content -->
-      <div class=" ">
-        <div class="">
-          <img
-            class="w-full h-[500px]"
-            src="/src/Image/body_sectioin/body_sectioin.png"
-            alt=""
-          />
+      <div class="py-4 bg-red-700">
+        <div class="px-20 py-4 w-full h-full bg-red-700">
+          
+          
+          <!-- card  1-->
+          <div class="px-20 py-4 w-full h-full bg-red-700">
+            <div class="flex flex-row gap-4">
+              <div
+                class="rounded-l-lg flex flex-col justify-center w-48 h-48 p-2 bg-gray-400"
+              >
+                <div>
+                  <img
+                    class="w-full h-full motobike_1 cursor-pointer"
+                    src="/src/Image/home/motobike_1.png"
+                    alt="motobike_1"
+                  />
+                </div>
+                <div class="pt-2 flex flex-row justify-between">
+                  <p class="rounded-lg px-2 hover:bg-red-300">Price 1000$</p>
+                  <button class="w-20 rounded-lg px-2 hover:bg-red-300">
+                    Buy
+                  </button>
+                </div>
+              </div>
+              <div
+                class="bg-gray-200 rounded-r-lg flex justify-center items-center text-center"
+              >
+                <p>
+                  better known by his stage name Loren (Korean: 로렌, stylized
+                  as LØREN), is a South Korean singer, songwriter and producer
+                  under The Black Label, and releases music through his own
+                  indie label Fire Exit Records. He debuted as a singer on
+                  November 13, 2020
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- card  2-->
+          <div class="px-20 py-4 w-full h-full bg-red-700">
+            <div class="flex flex-row gap-4">
+              <div
+                class="rounded-l-lg flex flex-col justify-center w-48 h-48 p-2 bg-gray-400"
+              >
+                <div>
+                  <img
+                    class="w-full h-full motobike_1 cursor-pointer"
+                    src="/src/Image/home/motobike_1.png"
+                    alt="motobike_1"
+                  />
+                </div>
+                <div class="pt-2 flex flex-row justify-between">
+                  <p class="rounded-lg px-2 hover:bg-red-300">Price 1000$</p>
+                  <button class="w-20 rounded-lg px-2 hover:bg-red-300">
+                    Buy
+                  </button>
+                </div>
+              </div>
+              <div
+                class="bg-gray-200 rounded-r-lg flex justify-center items-center text-center"
+              >
+                <p>
+                  better known by his stage name Loren (Korean: 로렌, stylized
+                  as LØREN), is a South Korean singer, songwriter and producer
+                  under The Black Label, and releases music through his own
+                  indie label Fire Exit Records. He debuted as a singer on
+                  November 13, 2020
+                </p>
+              </div>
+            </div>
+          </div>
+
+          
+          <!-- card  3-->
+          <div class="px-20 py-4 w-full h-full bg-red-700">
+            <div class="flex flex-row gap-4">
+              <div
+                class="rounded-l-lg flex flex-col justify-center w-48 h-48 p-2 bg-gray-400"
+              >
+                <div>
+                  <img
+                    class="w-full h-full motobike_1 cursor-pointer"
+                    src="/src/Image/home/motobike_1.png"
+                    alt="motobike_1"
+                  />
+                </div>
+                <div class="pt-2 flex flex-row justify-between">
+                  <p class="rounded-lg px-2 hover:bg-red-300">Price 1000$</p>
+                  <button class="w-20 rounded-lg px-2 hover:bg-red-300">
+                    Buy
+                  </button>
+                </div>
+              </div>
+              <div
+                class="bg-gray-200 rounded-r-lg flex justify-center items-center text-center"
+              >
+                <p>
+                  better known by his stage name Loren (Korean: 로렌, stylized
+                  as LØREN), is a South Korean singer, songwriter and producer
+                  under The Black Label, and releases music through his own
+                  indie label Fire Exit Records. He debuted as a singer on
+                  November 13, 2020
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="py-4 bg-red-700">
-          <!-- card 1 -->
-          <div class="px-20 py-4 w-full h-full bg-red-700">
-            <div class="flex flex-row gap-4">
-              <div
-                class="rounded-l-lg flex flex-col justify-center w-48 h-48 p-2 bg-gray-400"
-              >
-                <div>
-                  <img
-                    class="w-full h-full"
-                    src="/src/Image/home/motobike_1.png"
-                    alt=""
-                  />
-                </div>
-                <div class="pt-2 flex flex-row justify-between">
-                  <p class="rounded-lg px-2 hover:bg-red-300">Price 1000$</p>
-                  <button class="w-20 rounded-lg px-2 hover:bg-red-300">
-                    Buy
-                  </button>
-                </div>
-              </div>
-              <div
-                class="bg-gray-200 rounded-r-lg flex justify-center items-center text-center"
-              >
-                <p>
-                  better known by his stage name Loren (Korean: 로렌, stylized
-                  as LØREN), is a South Korean singer, songwriter and producer
-                  under The Black Label, and releases music through his own
-                  indie label Fire Exit Records. He debuted as a singer on
-                  November 13, 2020
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- card 2-->
-          <div class="px-20 py-4 w-full h-full bg-red-700">
-            <div class="flex flex-row gap-4">
-              <div
-                class="rounded-l-lg flex flex-col justify-center w-48 h-48 p-2 bg-gray-400"
-              >
-                <div>
-                  <img
-                    class="w-full h-full"
-                    src="/src/Image/home/motobike_1.png"
-                    alt=""
-                  />
-                </div>
-                <div class="pt-2 flex flex-row justify-between">
-                  <p class="rounded-lg px-2 hover:bg-red-300">Price 1000$</p>
-                  <button class="w-20 rounded-lg px-2 hover:bg-red-300">
-                    Buy
-                  </button>
-                </div>
-              </div>
-              <div
-                class="bg-gray-200 rounded-r-lg flex justify-center items-center text-center"
-              >
-                <p>
-                  better known by his stage name Loren (Korean: 로렌, stylized
-                  as LØREN), is a South Korean singer, songwriter and producer
-                  under The Black Label, and releases music through his own
-                  indie label Fire Exit Records. He debuted as a singer on
-                  November 13, 2020
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- card  3 -->
-          <div class="px-20 py-4 w-full h-full bg-red-700">
-            <div class="flex flex-row gap-4">
-              <div
-                class="rounded-l-lg flex flex-col justify-center w-48 h-48 p-2 bg-gray-400"
-              >
-                <div>
-                  <img
-                    class="w-full h-full"
-                    src="/src/Image/home/motobike_1.png"
-                    alt=""
-                  />
-                </div>
-                <div class="pt-2 flex flex-row justify-between">
-                  <p class="rounded-lg px-2 hover:bg-red-300">Price 1000$</p>
-                  <button class="w-20 rounded-lg px-2 hover:bg-red-300">
-                    Buy
-                  </button>
-                </div>
-              </div>
-              <div
-                class="bg-gray-200 rounded-r-lg flex justify-center items-center text-center"
-              >
-                <p>
-                  better known by his stage name Loren (Korean: 로렌, stylized
-                  as LØREN), is a South Korean singer, songwriter and producer
-                  under The Black Label, and releases music through his own
-                  indie label Fire Exit Records. He debuted as a singer on
-                  November 13, 2020
-                </p>
-              </div>
-            </div>
-          </div>
+
+
+        </div>
+        </div>
         </div>
       </div>
 
-      <!-- Footer -->
-      <div class="footer">
-        <div
-          class="w-full h-full flex flex-row gap-6 justify-between p-20 bg-gray-400"
-        >
-          <div>
-            <h1 class="text-xl font-bold">About</h1>
-            <div class="hover:underline"><a href=""> our story</a></div>
-            <div class="hover:underline"><a href=""> meet the team</a></div>
-            <div class="hover:underline"><a href="">carers</a></div>
-            <div class="hover:underline"><a href="">lastest blog post</a></div>
-          </div>
-          <div>
-            <h1 class="text-xl font-bold">Help</h1>
-            <div class="hover:underline"><a href="">faqs</a></div>
-            <div class="hover:underline"><a href="">contact support</a></div>
-            <div class="hover:underline"><a href="">customer service</a></div>
-            <div class="hover:underline"><a href="">return policy</a></div>
-          </div>
-          <div>
-            <h1 class="text-xl font-bold">Account</h1>
-            <div class="hover:underline"><a href="">login</a></div>
-            <div class="hover:underline"><a href="">register</a></div>
-            <div class="hover:underline"><a href="">my profile</a></div>
-            <div class="hover:underline"><a href="">order history</a></div>
-          </div>
-          <div>
-            <h1 class="text-xl font-bold">Brand</h1>
-            <div class="hover:underline"><a href="">brand a</a></div>
-            <div class="hover:underline"><a href="">brand b</a></div>
-            <div class="hover:underline"><a href="">brand c</a></div>
-            <div class="hover:underline"><a href="">brand d</a></div>
-          </div>
+      <!-- Modal -->
+      <div id="myModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 hidden justify-center items-center">
+        <div class="modal-content">
+          <button class="close-button" id="closeModal">Close</button>
+          <h2 class="text-xl font-bold mb-4">Image Information</h2>
+          <img id="modalImage" class="w-full h-full object-fit mb-4"  src="" alt="" />
+          <p id="modalDescription" class="text-center text-lg mb-4">Description of the image.</p>
         </div>
       </div>
+          <!-- Footer -->
+          <div class="footer">
+            <div
+              class="w-full h-full flex flex-row gap-6 justify-between p-20 bg-gray-400"
+            >
+              <div>
+                <h1 class="text-xl font-bold">About</h1>
+                <div class="hover:underline"><a href=""> our story</a></div>
+                <div class="hover:underline"><a href=""> meet the team</a></div>
+                <div class="hover:underline"><a href="">carers</a></div>
+                <div class="hover:underline"><a href="">lastest blog post</a></div>
+              </div>
+              <div>
+                <h1 class="text-xl font-bold">Help</h1>
+                <div class="hover:underline"><a href="">faqs</a></div>
+                <div class="hover:underline"><a href="">contact support</a></div>
+                <div class="hover:underline"><a href="">customer service</a></div>
+                <div class="hover:underline"><a href="">return policy</a></div>
+              </div>
+              <div>
+                <h1 class="text-xl font-bold">Account</h1>
+                <div class="hover:underline"><a href="">login</a></div>
+                <div class="hover:underline"><a href="">register</a></div>
+                <div class="hover:underline"><a href="">my profile</a></div>
+                <div class="hover:underline"><a href="">order history</a></div>
+              </div>
+              <div>
+                <h1 class="text-xl font-bold">Brand</h1>
+                <div class="hover:underline"><a href="">brand a</a></div>
+                <div class="hover:underline"><a href="">brand b</a></div>
+                <div class="hover:underline"><a href="">brand c</a></div>
+                <div class="hover:underline"><a href="">brand d</a></div>
+              </div>
+            </div>
+          </div>
+   
     </div>
+
+    <script>
+      // Get modal elements
+      const modal = document.getElementById("myModal");
+      const modalImage = document.getElementById("modalImage");
+      const modalDescription = document.getElementById("modalDescription");
+      const closeModalButton = document.getElementById("closeModal");
+
+      // Get all images with the class 'motobike_1'
+      const motobikeImages = document.getElementsByClassName("motobike_1");
+
+      // Add event listener to each image
+      for (let i = 0; i < motobikeImages.length; i++) {
+        motobikeImages[i].addEventListener("click", function () {
+          // Set the modal image and description
+          modalImage.src = motobikeImages[i].src;
+          modalDescription.textContent = "This is a high-quality motorbike image.";
+
+          // Display the modal with animation
+          modal.classList.add("show");
+        });
+      }
+
+      // Close the modal when the close button is clicked
+      closeModalButton.addEventListener("click", function () {
+        modal.classList.remove("show");
+      });
+
+      // Close the modal if the user clicks outside of the modal content
+      window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+          modal.classList.remove("show");
+        }
+      });
+    </script>
+
   </body>
 </html>
